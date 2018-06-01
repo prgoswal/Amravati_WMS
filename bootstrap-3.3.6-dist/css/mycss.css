@@ -1,0 +1,256 @@
+﻿
+body
+{
+	background: rgba(232, 232, 232, 0.62);
+	color: #003F8E;
+}
+  .container-full {
+            margin-left: -30px;
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+        }
+.wrapper
+{
+	margin: 40px 0 0 0;
+}
+
+.master-wrapper
+{
+	margin: 10px 0 100px 0;
+}
+
+.card-container.card
+{
+	max-width: 350px;
+	padding: 40px 40px;
+}
+.upper
+{
+	text-transform:uppercase;
+	}
+/*.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}*/
+
+/*
+ * Card component
+ */
+.card
+{
+	background-color: #F7F7F7; /* just in case there no content*/
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	margin-top: 50px; /* shadows and rounded borders */
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card
+{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 25px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card
+{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0 0;
+	min-height: 1em;
+}
+
+.reauth-email
+{
+	display: block;
+	color: #404040;
+	line-height: 2;
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .inputEmail, .form-signin .inputPassword
+{
+	direction: ltr;
+	height: 44px;
+	font-size: 16px;
+}
+
+.form-signin input[type=email], .form-signin input[type=password], .form-signin input[type=text], .form-signin button
+{
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+	z-index: 1;
+	position: relative;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus
+{
+	border-color: rgb(104, 145, 162);
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin
+{
+	/*background-color: #4d90fe; */ /*background-color: rgb(104, 145, 162);*/ /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+	padding: 0px;
+	font-weight: 700;
+	font-size: 14px;
+	height: 36px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	-o-transition: all 0.218s;
+	-moz-transition: all 0.218s;
+	-webkit-transition: all 0.218s;
+	transition: all 0.218s;
+}
+/*======================================================
+                        .navbar
+=======================================================*/
+.navbar-default
+{
+	background-repeat: repeat-x;
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+	background-image: linear-gradient(to bottom,#fff 0,#f8f8f8 100%);
+}
+/*======================================================
+                        .box
+=======================================================*/
+.box
+{
+	border: 2px solid #50618C;
+	padding: 10px;
+	background: #ddd;
+    margin-bottom:5px;
+}
+h3.header-title {
+    text-align: center;
+    margin: 0 0 3px 0;
+}
+
+p.title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 190px;
+    text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0, rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+}
+.form-control:focus
+{
+	border-color: rgb(104, 145, 162);
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+label
+{
+	font-size: 13px;
+	margin-top: 5px;
+}
+
+/*======================================================
+                        .table
+=======================================================*/
+.table-bordered
+{
+	border: 2px solid #50618C;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td
+{
+	border: 2px solid #50618C;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 1px;
+}
+@media (max-width: 1024px)
+{
+	label
+	{
+		font-size: 13px;
+		margin-top: 5px;
+	}
+    .user-creation label{
+        font-size: 12px;
+}
+}
+/*======================================================
+                        .change-password
+=======================================================*/
+.change-password
+{
+	border: 1px solid #50618C;
+	padding: 15px;
+	box-shadow: 0px 0px 12px 0px #50618c;
+	margin-top: 70px;
+	background: #fff;
+}
+.change-password h3
+{
+	margin: 0 0 20px 0;
+}
+.change-password hr.changecolor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #50618C;
+}
+/*======================================================
+                  .user-creation
+=======================================================*/
+.user-creation {
+    border: 1px solid #50618C;
+	padding: 15px;
+	box-shadow: 0px 0px 12px 0px #50618c;
+	margin-top: 22px;
+	background: #fff;
+}
+.user-creation h3
+{
+	margin: 0 0 20px 0;
+}
+.user-creation hr.changecolor {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #50618C;
+}
+
+
+.label-info,
+.badge-info { background-color: #2A6598!important; }

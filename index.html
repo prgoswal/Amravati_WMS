@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Search form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- custom css -->
+    <link href="css1/bootstrap.min.css" rel="stylesheet">
+    <link href="css1/style.css" rel="stylesheet">
+    <link href="css1/font-awesome.css" rel="stylesheet">
+    <link href="css1/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid student-form">
+	<div class="main-form container">
+		<h3 class="main-head">Student Details</h3>
+		<form  class="student-form" role="form">
+			<!-- section1 -->
+			<div class="section1">
+				<div class="col-md-2 exam-year">
+					<label for="Exam-year">Exam Year.</label>
+					<div class="dropdown">
+					   <select required class="exam-year-ddl">
+						   <option value="">Exam Year</option>
+						   <option value="2010-2011">2010-2011</option>
+						  <option value="2011-2012">2011-2012</option>
+						  <option value="2012-2013">2012-2013</option>
+						  <option value="2013-2014">2013-2014</option>
+						  <option value="2014-2015">2014-2015</option>
+						</select>
+					</div>
+				</div>
+			<div class="col-md-2 exam-session">
+					<label for="Exam-session">Exam Session.</label>
+					<div class="dropdown2">
+						<select required class="exam-session-ddl">
+						   <option value="Select">Exam Session</option>
+						   <option value="summer">Summer</option>
+						  <option value="winter">Winter</option>
+						</select>
+					</div>
+			</div>
+			<div class="col-md-8 exam-name">
+					<label class="exam-lbl" for="exam-name">Exam Name</label>
+					<div class="dropdown3">
+						<select required class="exam-name-ddl">
+						   <option value="Select">Exam name</option>
+						   <option value="summer">Mp Board</option>
+						  <option value="winter">CBSE</option>
+						</select>
+					</div>
+			</div>
+		</div>
+<!-- section1-end -->
+<!-- section2 -->
+	<div class="section2">
+			<div class="col-md-4 student-name">
+				<label for="student-name">Student Name</label>
+				<input type="text" class="form-control stu-name" id="name" placeholder="Enter Student Name">
+			</div>
+			<div class="col-md-4 student-rollno">
+				<label for="rollno">Student Roll No.</label>
+				<input type="text" class="form-control rollno" id="rollno" placeholder="Enter Student Roll No." required="" data-validation-required-message="Please Enter Student Rollno." aria-invalid="false">
+			</div>
+		<div class="col-md-4 apply-for">
+				<label for="apply-for">Apply for</label>
+			<div class="dropdown4">
+				<select required class="apply-for-ddl">
+					<option value="">Apply For</option>
+					<option value="2010-2011">mbbs</option>
+					<option value="2011-2012">Be</option>
+				</select>
+			</div>
+		</div>
+	</div>
+<!-- section2-end -->
+<!-- section3 -->
+	<div class="row section3">
+		<div class="col-md-6 search-btn-section">
+			<button type="submit" class="search-btn btn btn-default">Search</button>
+		</div>
+		<div class="col-md-6 reset-btn-section">
+			<button class="reset-btn" type="reset" value="Reset">Reset <i class="fa fa-repeat" aria-hidden="true"></i></button>
+		</div>
+	</div>
+<!-- section3-end -->
+<!-- section4-->
+	<div class="col-md-12 remark-section">
+		<label for="remark">Remark</label>
+		<input type="text" class="form-control remark" id="remark" placeholder="Remark"  aria-invalid="false">
+	</div>
+<!-- section4-end -->
+<!-- section5-->
+	<div class="col-md-12 result">Search results...</div>
+	<button class="print-btn" type="button" value="print">Print</button>
+	<button class="submit-btn" type="button" value="submit">Submit</button>
+<!-- section5-end-->
+</form>
+</div>
+
+<!-- jQuery -->
+    <script src="js1/jquery.js"></script>
+    <script src="js1/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js1/bootstrap.min.js"></script>
+</body>
+</html>

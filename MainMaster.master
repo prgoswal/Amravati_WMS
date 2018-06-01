@@ -1,0 +1,221 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MainMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Amravati University(WMS)</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap theme -->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this template -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.6-dist/css/mycss.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-3.3.6-dist/css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.6-dist/css/jquery.alerts.css" rel="stylesheet" />
+
+    <script src="bootstrap-3.3.6-dist/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <%--<script src="bootstrap-3.3.6-dist/js/numberonly.js" type="text/javascript"></script>--%>
+    <%--<script src="js/jquery-1.10.2.js"></script>--%>
+    <script src="bootstrap-3.3.6-dist/js/jquery-ui.js"></script>
+    <%--<script src="bootstrap-3.3.6-dist/js/jquery.min.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/jquery-ui.min.js"></script>--%>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (document.getElementById('hfvalue').value != window.name) {
+                window.location = "UserLogin.aspx";
+            }
+        });
+    </script>
+
+    <script type="text/javascript" id="MyKey">
+        var myWindow;
+        function closeWin() {
+            myWindow.close();
+        }
+    </script>
+
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function () { null };
+
+    </script>
+
+
+    <%--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>--%>
+    <%--<script src="bootstrap-3.3.6-dist/js/jquery-ui.js"></script>--%>
+
+    <%--<link rel="stylesheet" href="/resources/demos/style.css">--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body oncontextmenu="return false;" style="overflow-x: hidden; font-family: Calibri;" oncopy="return false;" onpast="return false;" oncut="return false;">
+    <form id="form1" runat="server" class="form-horizontal">
+        <p style="display: none">
+            Master Page Date:
+        <input type="text" id="txtdatepicker">
+        </p>
+        <div class="page-header">
+            <h3 class="header-title text-center" style="font-family: Calibri; padding: 11px 15px 0 0px !important;">Sant Gadge Baba Amravati University
+                <br>
+                <span style="font-size: 29px;">WorkFlow Management System</span></h3>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div class="navbar navbar-default" role="navigation">
+            <%-- <asp:UpdatePanel ID="UpdatePaneAdmin" runat="server">
+                <ContentTemplate>--%>
+            <asp:Panel runat="server" ID="panelAdmin">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu2">
+                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                                class="icon-bar"></span><span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse menu2">
+                        <ul class="nav navbar-nav">
+
+                            <li id="Home" runat="server"><a href="Home.aspx">Home</a></li>
+
+                            <li class="dropdown" id="AEntry" runat="server">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <%--  <asp:Label ID="lblentry" runat="server" Text="Entry"></asp:Label>--%>
+                                    <span id="A_Entry" runat="server">Utility<b
+                                        class="caret"></b>   </span>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="A4_Authority"><a href="FrmDocumentApprovalLevel.aspx">Approval Authority</a></li>
+                                    <li runat="server" id="A5_PendingApp"><a href="FrmZeroLevel.aspx">Pending Applications</a></li>
+                                    <li runat="server" id="A3_Profile"><a href="FrmProfileCreation.aspx">Profile Management</a></li>
+                                    <li runat="server" id="A1_Serching"><a href="FrmStudentDetail.aspx">Searching</a></li>
+                                    <li class="dropdown dropdown-submenu" id="A2_User" runat="server"><a href="#" class="dropdown-toggle" data-toggle="dropdown">User Management</a>
+                                        <ul class="dropdown-menu">
+                                            <li runat="server" id="UserCreation"><a href="UserCreation.aspx">Create Users</a></li>
+                                            <li runat="server" id="UserLockingUnlocking"><a href="UserLockingUnlocking.aspx">Active/Lock Users</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dropdown" id="BApproval" runat="server">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span id="B_Approval" runat="server">Approval<b
+                                        class="caret"></b></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="B1_Approval"><a href="FrmApproval.aspx">Application Approval</a></li>
+                                </ul>
+                            </li>
+                            <%--<li id="C_Print" runat="server"><a href="FrmPrint.aspx">Print</a></li>--%>
+
+                            <li class="dropdown" id="D_Reports" runat="server">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    <span id="Span1" runat="server">Reports<b
+                                        class="caret"></b></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="Rpt_MIS" runat="server"><a href="ApplicationMIS.aspx">Application MIS</a></li>
+                                    <%--<li id="Rpt_Print" runat="server"><a href="FrmPrint.aspx">Print Certificate</a></li>--%>
+                                    <li id="Rpt_Print" runat="server"><a href="FrmPrint_OLD.aspx">Print Certificate</a></li>
+                                    <%--<li id="Li3" runat="server"><a href="Default.aspx">Default</a></li>--%>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="Li1" runat="server">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    <span id="E_app" runat="server">Application<b
+                                        class="caret"></b></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="E_AppTrail" runat="server"><a href="FrmApplicationProgress.aspx?ApplicationID=0">Application Trail</a></li>
+
+                                    <li id="E_ApplicationStatus" runat="server"><a href="FrmApplicationStatus.aspx">Application Status</a></li>
+
+                                    <%--   <li id="Li2" runat="server"><a href="FrmDuplicateMarksheet.aspx">Duplicate marksheet</a></li>--%>
+                                </ul>
+                            </li>
+                            <%--<li id="Li4" runat="server"><a href="FrmFileUploadTextFormat.aspx">File Upload</a></li>
+                            <li id="Li5" runat="server"><a href="FrmFacultyMapping.aspx">Faculty Maping</a></li>
+                            <li id="Li2" runat="server"><a href="FrmExamMapping.aspx">Exam Maping</a></li>--%>
+
+                            <%--<li id="Li1" runat="server"><a href="password.aspx">mac</a></li>--%>
+
+                            <%--     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-print"></i>&nbsp;Meta Data<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                    <li class="dropdown dropdown-submenu" id="A4" runat="server"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    For Allotment</a>                                    
+                                    <ul class="dropdown-menu">
+                                        <li runat="server" id="MovePhotos"><a href="MovePhotos.aspx">Image Move</a></li>
+                                        <li runat="server" id="FrmLotAllotment"><a href="FrmLotAllotment.aspx">Lot Allotment</a></li>
+                                </ul></li>
+                                <li runat="server" id="A5"><a href="ImgViewer.aspx">Meta Data Entry</a></li>
+                                <li runat="server" id="A6"><a href="ImageViwer.aspx">Image Viewer</a> </li>
+                                <li runat="server" id="A7"><a href="BothImgsShow.aspx">Foil and CF Image Show</a>
+                                </li>
+                                <li runat="server" id="A8"><a href="FrmTotalEntryCount.aspx">Total No.
+                                    of Records</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-print"></i>&nbsp;Report<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown dropdown-submenu" id="A9" runat="server"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    MIS</a>
+                                    <ul class="dropdown-menu">                                    
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>--%>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="A003" style="font-family: Calibri; font-weight: bold" runat="server" class="dropdown bg-info">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User :<asp:Label runat="server" ID="lblUserName"></asp:Label><b
+                                    class="caret"></b></a><ul class="dropdown-menu">
+                                        <li id="A001" runat="server"><a href="ChangePassword.aspx">Edit Profile</a></li>
+                                        <%--<li><a href="UserLogin.aspx">Logout</a></li>--%>
+                                        <li id="A002" runat="server">
+                                            <asp:LinkButton runat="server" ID="lnkLogOut" Text="Logout" OnClick="lnkLogOut_Click" ValidationGroup="xyz"></asp:LinkButton></li>
+
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </asp:Panel>
+        </div>
+        <div class="container-fluid">
+            <div class="master-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <asp:HiddenField ID="hfvalue" runat="server" />
+    </form>
+
+    <%-- <script src="bootstrap-3.3.6-dist/js/jquery.min.js" type="text/javascript"></script>--%>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="bootstrap-3.3.6-dist/js/script.js" type="text/javascript"></script>
+    <%--<script src="bootstrap-3.3.6-dist/js/jquery-1.9.0.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/jquery-migrate-1.2.1.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/jquery.ui.draggable.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/jquery.alerts.js"></script>--%>
+    <script src="js/Index.js"></script>
+</body>
+<!--Java Script-->
+</html>

@@ -1,0 +1,88 @@
+﻿body {
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+}
+
+/*==========================
+    Form Border
+============================*/
+#box {
+    border: 3px solid steelblue;
+    width: 99%;
+    /*background-color: powderblue;*/
+    margin-top: 5px;
+}
+/*==========================
+    Form Header
+============================*/
+#header .bg-primary h3 {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#header .bg-primary h5 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: -10px;
+    padding-bottom: 7px;
+}
+
+.bg-primary {
+    color: #fff;
+    background-color: #337ab7;
+    text-align: center;
+    font-size: 22px;
+}
+/*==========================
+    Form Heading Property
+============================*/
+.bg-info {
+    height: 43px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+label > span {
+    color: red;
+}
+/*==========================
+    DatePicker 
+============================*/
+.ui-datepicker {
+    background: #f8f8f8;
+    border: 1px solid #B7D1E0;
+    color: #000;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #B7D1E0;
+    background: #D9EDF7;
+    font-weight: normal;
+    color: #000;
+}
+
+.ui-widget-header {
+    border: 1px solid #B7D1E0;
+    background: #D9EDF7;
+    color: #222222;
+    font-weight: bold;
+}
+/*==========================
+    Notice
+============================*/
+.notice {
+    font-size: 18px;
+    text-align: justify;
+}
+/*==========================
+    Download Button
+============================*/
+.btn-change {
+    background-color: transparent;
+    color: #31B0D5;
+}
+ 
