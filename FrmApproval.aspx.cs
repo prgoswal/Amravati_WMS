@@ -95,7 +95,48 @@ public partial class FrmSecondLevel : System.Web.UI.Page
         catch
         { }
     }
+ public  async void GetAppDetail()
+    {
+        try
+        {
+            HttpClient HClient = new HttpClient();
+            HClient.BaseAddress = new Uri(DataAcces.Url);
+            HClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            DataSet myDataSet = null;
+            if (usertypeid > 53)// this for all Other users  Other than admin and data entry users.
+            {
+                objPlSecondLevel.Ind = 4;
+                objPlSecondLevel.UserTypeId = Convert.ToString(usertypeid);
 
+                var uri1 = string.Format("api/SecondLevel/GetappDetail/?ind={0}&levelid={1}", objPlSecondLevel.Ind, objPlSecondLevel.UserTypeId);
+                var response1 = HClient.GetAsync(uri1).Result;
+                var productJsonString = await response1.Content.ReadAsStringAsync();
+                myDataSet = JsonConvert.DeserializeObject<DataSet>(productJsonString);
+
+                if (myDataSet.Tables.Count > 0)
+                {
+                    if (myDataSet.Tables[0].Rows.Count > 0) 
+                    { 
+                        lblPendingsince.Text = myDataSet.Tables[0].Rows[0]["PendingSince"].ToString() + " Days";
+                        grdPandingDetails.DataSource = myDataSet.Tables[0];
+                        grdPandingDetails.DataBind();
+                    }
+                    else
+                        lblPendingsince.Text = "0 Days";
+
+                    if (myDataSet.Tables[1].Rows.Count > 0)
+                    {
+                        grdCompleted.DataSource = myDataSet.Tables[1];
+                        grdCompleted.DataBind();
+                    }
+                    Session["PendingPopup"] = myDataSet.Tables[0];
+                }
+                myDataSet = null; productJsonString = null; response1 = null; uri1 = null;
+            }
+        }
+        catch
+        { }
+    }
   protected async void grdPandingDetails_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         try
